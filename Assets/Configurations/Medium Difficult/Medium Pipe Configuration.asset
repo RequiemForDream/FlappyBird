@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54db94bbdab60a8429cc2757263db85c, type: 3}
+  m_Name: Medium Pipe Configuration
+  m_EditorClassIdentifier: 
+  _pipeView: {fileID: -9115587206111174308, guid: c6bee7360567eff4fa9d3a356d9a02c4, type: 3}
+  _pipeModel:
+    _speed: 5
+    _pointsToAdd: 1
