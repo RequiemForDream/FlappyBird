@@ -14,7 +14,6 @@ namespace Character
             if (collision.TryGetComponent(out Obstacle obstacle))
             {
                 OnCollided?.Invoke();
-                Debug.Log("Detected");
             }
         }
     }

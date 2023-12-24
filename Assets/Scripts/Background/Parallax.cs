@@ -22,6 +22,11 @@ namespace Background
         {
             _meshRenderer.material.mainTextureOffset += new Vector2(_parallaxConfiguration.AnimationSpeed * deltaTime, 0);
         }
+
+        public void Clear()
+        {
+            _updater.RemoveListener(this);
+        }
     }
 }
 

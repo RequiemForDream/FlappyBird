@@ -25,6 +25,7 @@ namespace Template
         public System.Action<string> OnConversionRecieved;
 
         private string _conversionData;
+        private float _loadTime = 1f;
 
         private void OnEnable()
         {
@@ -79,8 +80,8 @@ namespace Template
 
             _dataView.text = _conversionData.ToString();
             Debug.Log("<color=green>Sucsess: </color> " + _conversionData);
-            yield return new WaitForSeconds(3f);
-            SceneLoader.LoadSceneByBuildIndex(1);
+            yield return new WaitForSeconds(_loadTime);
+            SceneLoader.LoadSceneByBuildIndex(DataClass.MENU_SCENE);
         }
 
         private void onConversionRecieved(string conversionData)

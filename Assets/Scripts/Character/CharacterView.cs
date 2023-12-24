@@ -16,10 +16,14 @@ namespace Character
 
         private int _spriteIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             SpriteRenderer = GetComponent<SpriteRenderer>();
             PipeDetector = GetComponent<IDetector>();
+        }
+
+        private void Start()
+        {
             InvokeRepeating(nameof(AnimateSwing), _time, _repeatBase);
         }
 
@@ -40,6 +44,11 @@ namespace Character
             }
 
             SpriteRenderer.sprite = _sprites[_spriteIndex];
+        }
+
+        private void OnDestroy()
+        {
+            OnDestroyHandler?.Invoke(); 
         }
     }
 }

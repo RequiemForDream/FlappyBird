@@ -72,9 +72,9 @@ namespace Pipes.Generation
 
         public void Clear()
         {
-            foreach (var obstacle in _pool)
+            foreach (var pipe in _pool)
             {
-                //obstacle.Clear();
+                pipe.PipeView.gameObject.SetActive(false);
             }
         }
     }

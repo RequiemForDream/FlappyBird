@@ -21,9 +21,16 @@ namespace Pipes.Generation
             _pipeFactory = pipeFactory;
             _pipeSpawnConfiguration = pipeSpawnConfiguration;
             _updater = updater;
-            _updater.AddListener(this);
+            
             CreatePool();
             _currentTime = _pipeSpawnConfiguration.SpawnRate;
+        }
+
+        public void Initialize()
+        {
+            _currentTime = _pipeSpawnConfiguration.SpawnRate;
+            _updater.AddListener(this);
+            CreatePool();
         }
 
         private void CreatePool()
@@ -48,6 +55,12 @@ namespace Pipes.Generation
             var y = 1f * Random.Range(_pipeSpawnConfiguration.MinHeight, _pipeSpawnConfiguration.MaxHeight);
             Vector3 position = new Vector3(DataClass.RIGHT_EDGE, y, 0f);
             pipe.SetPosition(position);
+        }
+
+        public void Reset()
+        {
+            _pipePool.Clear();
+            _updater.RemoveListener(this);
         }
     }
 }

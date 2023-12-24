@@ -24,22 +24,36 @@ namespace Character
             _characterModel = characterModel;
             _updater = updater;
             _inputService = inputService;
-            Initilalize();
         }
 
-        private void Initilalize()
+        public void Initialize()
         {
+            _characterView.gameObject.SetActive(true);
             _updater.AddListener(this);
             _inputService.OnTapScreen += Swing;
+            _characterView.PipeDetector.OnCollided += OnDeath;
             _characterView.Initialize(_characterModel.AnimatedSprites, _characterModel.AnimationTime,
                 _characterModel.RepeatBase);
             _characterView.OnDestroyHandler += Destroy;
+            
         }
 
         public void Tick(float deltaTime)
         {
             _direction.y += _characterModel.Gravity * deltaTime;
             _characterView.transform.position += _direction * deltaTime;
+        }
+
+        public void Reset()
+        {
+            _characterView.gameObject.SetActive(false);
+            _updater.RemoveListener(this);
+            _inputService.OnTapScreen -= Swing;
+        }
+
+        private void OnDeath()
+        {
+            OnCharacterDeath?.Invoke();
         }
 
         private void Swing()
@@ -50,6 +64,7 @@ namespace Character
         private void Destroy()
         {
             _updater.RemoveListener(this);
+            _characterView.PipeDetector.OnCollided -= OnDeath;
             _characterView.OnDestroyHandler -= Destroy;
         }
     }

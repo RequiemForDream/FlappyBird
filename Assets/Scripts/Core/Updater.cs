@@ -10,9 +10,9 @@ namespace Core
 
         private void Update()
         {
-            foreach (IUpdateListener listener in _updateListeners)
+            for (int i = 0; i < _updateListeners.Count; i++)
             {
-                listener.Tick(Time.deltaTime);
+                _updateListeners[i].Tick(Time.deltaTime);
             }
         }
 

@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db94bbdab60a8429cc2757263db85c, type: 3}
-  m_Name: Hard Pipe Configuration
+  m_Script: {fileID: 11500000, guid: 1e35e5f9619048543aa8b5720d6f9818, type: 3}
+  m_Name: Easy Pipe Spawn
   m_EditorClassIdentifier: 
-  _pipeView: {fileID: -9115587206111174308, guid: c6bee7360567eff4fa9d3a356d9a02c4, type: 3}
-  _pipeModel:
-    _speed: 6
-    _pointsToAdd: 1
+  _minHeight: -1
+  _maxHeight: 1
+  _spawnRate: 1.5
+  _autoExpand: 1
+  _count: 20

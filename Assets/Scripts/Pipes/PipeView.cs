@@ -9,12 +9,18 @@ namespace Pipes
         public event Action OnDestroyHandler;
 
         [SerializeField] private PointTrigger _pointTrigger;
+
         public PointTrigger PointTrigger 
         { 
             get 
             { 
                 return _pointTrigger; 
             }
+        }
+
+        private void OnDestroy()
+        {
+            OnDestroyHandler?.Invoke();
         }
     }
 }

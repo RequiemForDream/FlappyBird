@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pipeView: {fileID: -9115587206111174308, guid: c6bee7360567eff4fa9d3a356d9a02c4, type: 3}
   _pipeModel:
-    _speed: 5
+    _speed: 4.5
     _pointsToAdd: 1

@@ -4,7 +4,7 @@ namespace Utilities
 {
     public static class DataClass
     {
-        public const float RIGHT_EDGE = 10f;
+        public const float RIGHT_EDGE = 20f;
         public const float LEFT_EDGE = -10f;
 
         [Header("Scene Names")]

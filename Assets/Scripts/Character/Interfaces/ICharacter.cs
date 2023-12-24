@@ -6,5 +6,7 @@ namespace Character.Interfaces
     public interface ICharacter : IUpdateListener
     {
         event Action OnCharacterDeath;
+        void Initialize();
+        void Reset();   
     }
 }

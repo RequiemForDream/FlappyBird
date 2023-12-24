@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundConfiguration: {fileID: 11400000, guid: 275f469964a45ec4ab2a4393db916a7e, type: 2}
   _groundConfiguration: {fileID: 11400000, guid: 612b4aeba1f89474eb82f95eb6fcfea0, type: 2}
-  _pipeSpawnConfiguration: {fileID: 11400000, guid: 52f6d2f1c830074448f7c16f8540d329, type: 2}
   _characterConfiguration: {fileID: 11400000, guid: 452c5f80ad4a4924393acbe0668fe312, type: 2}
+  _easyPipeSpawnConfiguration: {fileID: 11400000, guid: f4cede9d770c9d849bfbeee61d7073b1, type: 2}
   _easyDifficultPipeConfiguration: {fileID: 11400000, guid: 25f5f785c3d544d4ca56fc6eaedb74b9, type: 2}
-  _mediumDifficultPipeConfiguration: {fileID: 11400000, guid: 1bafc0d2a1a9b8642b18929ad6145925, type: 2}
-  _hardDifficultPipeConfiguration: {fileID: 11400000, guid: 77b7e7c203486cc4c81ee8ecacbe8a85, type: 2}
+  _mediumPipeSpawnConfiguration: {fileID: 11400000, guid: 52f6d2f1c830074448f7c16f8540d329, type: 2}
+  _mediumDifficultPipeConfiguration: {fileID: 11400000, guid: 77b7e7c203486cc4c81ee8ecacbe8a85, type: 2}
+  _hardPipeSpawnConfiguration: {fileID: 11400000, guid: e365a633df652f04bbd01b0a3398bdef, type: 2}
+  _hardDifficultPipeConfiguration: {fileID: 11400000, guid: 1bafc0d2a1a9b8642b18929ad6145925, type: 2}
